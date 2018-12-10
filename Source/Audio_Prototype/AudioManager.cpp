@@ -64,6 +64,8 @@ void AAudioManager::Tick(float DeltaTime)
 			switchPlayer = false;
 			switchPlayerTimer = 0.0f;
 			playedSwitchAudio = false;
+			//Change the active charater mesh.
+			ChangeCharacter();
 		}
 	}
 
