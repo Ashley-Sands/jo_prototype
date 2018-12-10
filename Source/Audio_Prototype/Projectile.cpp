@@ -10,6 +10,7 @@ AProjectile::AProjectile()
 	PrimaryActorTick.bCanEverTick = true;
 
 	speedPerSecond = 5;
+	isProjectileActive = false;
 
 }
 
@@ -17,7 +18,10 @@ AProjectile::AProjectile()
 void AProjectile::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Set start position
 	currentYPosition = startPosition.Y;
+	SetActorLocation(startPosition);
 }
 
 // Called every frame
@@ -25,15 +29,32 @@ void AProjectile::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	// move object in the correct direction
 	if (leftToRight)
 		currentYPosition += (speedPerSecond * DeltaTime);
 	else
 		currentYPosition -= (speedPerSecond * DeltaTime);
 
+	if (!isProjectileActive) return;
+
 	FVector newPosition = startPosition;
 	newPosition.Y = currentYPosition;
-
-	SetActorLocation(newPosition);
+	
+	if (abs(startPosition.Y - currentYPosition) < travleDistance)
+		SetActorLocation(newPosition);
+	else
+		Reset();
 
 }
 
+void AProjectile::Reset()
+{
+	isProjectileActive = false;
+	SetActorLocation(startPosition);
+
+}
+
+void AProjectile::StartProjectile()
+{
+	isProjectileActive = true;
+}

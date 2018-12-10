@@ -32,8 +32,19 @@ public:
 	UPROPERTY(Category = "Movement", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		FVector startPosition;
 
+	UPROPERTY(Category = "Movement", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		float travleDistance;
+
+	//Resets projectile to its default location
+	//UFUNCTION(BlueprintCallable, Category = "Movement")
+		
+
+	UFUNCTION(BlueprintCallable, Category = "Movement")
+		void StartProjectile();
+
 private:
 
 	float currentYPosition;
-
+	bool isProjectileActive;
+	void Reset();
 };
