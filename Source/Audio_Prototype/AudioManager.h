@@ -6,6 +6,7 @@
 #include "AudioManager.generated.h"
 
 class AA_AudioCube;
+class ACharacterCube;
 
 UCLASS()
 class AUDIO_PROTOTYPE_API AAudioManager : public AActor
@@ -35,13 +36,10 @@ public:
 		float switchPauseLength;
 
 	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-		UStaticMesh* playerMesh;
+		ACharacterCube* playerCharacter;
 
 	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-		UStaticMesh* bossMesh;
-
-	UFUNCTION(BlueprintImplementableEvent, Category = "Character")
-		void ChangeCharacter();
+		ACharacterCube* bossCharacter;
 
 protected:
 	// Called when the game starts or when spawned

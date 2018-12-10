@@ -15,14 +15,24 @@ public:
 	// Sets default values for this actor's properties
 	ACharacterCube();
 
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintCallable, Category = "Audio")
+		void SetSwitch(bool active);
+
+	
+	UFUNCTION(BlueprintImplementableEvent, Category = "Character")		//Called via blue print
+		void ChangeCharacter();	
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
-	
-	
+private:
+
+	bool isActive;
+
 };

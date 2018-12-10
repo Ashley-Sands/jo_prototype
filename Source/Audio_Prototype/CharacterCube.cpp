@@ -7,7 +7,9 @@
 ACharacterCube::ACharacterCube()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
+
+	isActive = false;
 
 }
 
@@ -25,3 +27,12 @@ void ACharacterCube::Tick(float DeltaTime)
 
 }
 
+// Set the player to change materals.
+void ACharacterCube::SetSwitch(bool active)
+{
+
+	isActive = active;
+
+	ChangeCharacter();
+
+}

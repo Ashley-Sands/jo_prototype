@@ -2,7 +2,9 @@
 
 
 #include "AudioManager.h"
+#include "CharacterCube.h"
 #include "A_AudioCube.h"
+
 
 // Sets default values
 AAudioManager::AAudioManager()
@@ -64,8 +66,6 @@ void AAudioManager::Tick(float DeltaTime)
 			switchPlayer = false;
 			switchPlayerTimer = 0.0f;
 			playedSwitchAudio = false;
-			//Change the active charater mesh.
-			ChangeCharacter();
 		}
 	}
 
@@ -116,5 +116,8 @@ void AAudioManager::SwitchPlayer()
 	}
 
 	nextLoop += loopLength;
+
+	playerCharacter->SetSwitch(isPlayer);
+	bossCharacter->SetSwitch(!isPlayer);
 
 }
