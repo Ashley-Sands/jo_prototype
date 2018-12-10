@@ -36,3 +36,9 @@ void ACharacterCube::SetSwitch(bool active)
 	ChangeCharacter();
 
 }
+
+bool ACharacterCube::IsActive()
+{
+	return isActive; 
+}
+

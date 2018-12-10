@@ -21,12 +21,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Audio")
 		void SetSwitch(bool active);
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Character")		//Called via blue print
+		bool IsActive();
 	
 	UFUNCTION(BlueprintImplementableEvent, Category = "Character")		//Called via blue print
 		void ChangeCharacter();	
 
-	UPROPERTY(Category = "Audio", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
-	bool isActive;
 
 protected:
 	// Called when the game starts or when spawned
@@ -35,6 +35,6 @@ protected:
 
 private:
 
-	
+	bool isActive;
 
 };
