@@ -40,6 +40,14 @@ public:
 	UPROPERTY(Category = "Audio Source", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		UAudioComponent* AudioSource;
 
+	UPROPERTY(Category = "players", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		UStaticMesh* playerMesh;
+
+	UPROPERTY(Category = "players", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		UStaticMesh* bossMesh;
+
+	//**************
+	//** Debug
 	UPROPERTY(Category = "Audio Setup", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		bool debug;
 
