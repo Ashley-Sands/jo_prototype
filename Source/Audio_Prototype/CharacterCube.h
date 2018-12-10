@@ -21,8 +21,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Audio")
 		void SetSwitch(bool active);
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Character")		//Called via blue print
-		bool IsActive();
+	UFUNCTION(BlueprintCallable, Category = "Character")		//Called via blue print
+		bool GetIsActive();
 	
 	UFUNCTION(BlueprintImplementableEvent, Category = "Character")		//Called via blue print
 		void ChangeCharacter();	

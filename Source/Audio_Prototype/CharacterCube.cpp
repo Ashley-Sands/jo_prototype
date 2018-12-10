@@ -17,7 +17,7 @@ ACharacterCube::ACharacterCube()
 void ACharacterCube::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	ChangeCharacter();
 }
 
 // Called every frame
@@ -37,7 +37,7 @@ void ACharacterCube::SetSwitch(bool active)
 
 }
 
-bool ACharacterCube::IsActive()
+bool ACharacterCube::GetIsActive()
 {
 	return isActive; 
 }
