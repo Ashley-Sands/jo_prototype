@@ -34,6 +34,15 @@ public:
 	UPROPERTY(Category = "Audio", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		float switchPauseLength;
 
+	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		UStaticMesh* playerMesh;
+
+	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		UStaticMesh* bossMesh;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Character")
+		void ChangeCharacter();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
