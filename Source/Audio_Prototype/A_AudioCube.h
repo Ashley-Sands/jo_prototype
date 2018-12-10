@@ -40,11 +40,14 @@ public:
 	UPROPERTY(Category = "Audio Source", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		UAudioComponent* AudioSource;
 
-	UPROPERTY(Category = "players", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		UStaticMesh* playerMesh;
 
-	UPROPERTY(Category = "players", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		UStaticMesh* bossMesh;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Character")
+		void ChangeCharacter();
 
 	//**************
 	//** Debug
