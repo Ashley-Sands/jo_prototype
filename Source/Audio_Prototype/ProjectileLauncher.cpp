@@ -57,7 +57,7 @@ void AProjectileLauncher::SetLauncherActive(bool active)
 void AProjectileLauncher::LaunchProjectile()
 {
 
-	projectiles[currentProjectile].StartProjectile();
+	projectiles[currentProjectile]->StartProjectile();
 
 	currentProjectile++;
 

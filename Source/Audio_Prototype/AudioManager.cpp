@@ -4,6 +4,7 @@
 #include "AudioManager.h"
 #include "CharacterCube.h"
 #include "A_AudioCube.h"
+#include "ProjectileLauncher.h"
 
 
 // Sets default values
@@ -119,6 +120,10 @@ void AAudioManager::SwitchPlayer()
 	nextLoop += loopLength;
 
 	playerCharacter->SetSwitch(isPlayer);
+	playerLauncher->SetLauncherActive(isPlayer);
+
 	bossCharacter->SetSwitch(!isPlayer);
+	playerLauncher->SetLauncherActive(!isPlayer);
+
 
 }

@@ -7,6 +7,8 @@
 
 class AA_AudioCube;
 class ACharacterCube;
+class AProjectileLauncher;
+
 
 UCLASS()
 class AUDIO_PROTOTYPE_API AAudioManager : public AActor
@@ -40,6 +42,12 @@ public:
 
 	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 		ACharacterCube* bossCharacter;
+
+	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		AProjectileLauncher* playerLauncher;
+
+	UPROPERTY(Category = "Character", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		AProjectileLauncher* bossLauncher;
 
 protected:
 	// Called when the game starts or when spawned
