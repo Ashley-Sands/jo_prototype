@@ -123,7 +123,7 @@ void AAudioManager::SwitchPlayer()
 	playerLauncher->SetLauncherActive(isPlayer);
 
 	bossCharacter->SetSwitch(!isPlayer);
-	playerLauncher->SetLauncherActive(!isPlayer);
+	bossLauncher->SetLauncherActive(!isPlayer);
 
 
 }

@@ -31,7 +31,10 @@ void AProjectileLauncher::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (!isActive || timeToWait <= 0) return;
+	if(debug)
+		GEngine->AddOnScreenDebugMessage(8, 0.2f, FColor::Orange, isActive? "true":"false");
+
+	if (!isActive || timeToWait < 0) return;
 
 	timeToWait -= DeltaTime;
 
@@ -46,6 +49,10 @@ void AProjectileLauncher::Tick(float DeltaTime)
 
 void AProjectileLauncher::SetLauncherActive(bool active)
 {
+	if (debug) {
+		FString a = active ? "true" : "false";
+		GEngine->AddOnScreenDebugMessage(12, 10.0f, FColor::Orange, "CAlled" + a);
+	}
 	isActive = active;
 
 	if (!active) return;

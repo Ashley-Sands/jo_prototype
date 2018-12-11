@@ -29,6 +29,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Audio")
 		void SetLauncherActive(bool active);
 
+	UPROPERTY(Category = "Debug", EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
+		bool debug;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

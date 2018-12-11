@@ -19,7 +19,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Audio")
-		void SetSwitch(bool active);
+		void SetSwitch(bool active); 
 
 	UFUNCTION(BlueprintCallable, Category = "Character")		//Called via blue print
 		bool GetIsActive();
