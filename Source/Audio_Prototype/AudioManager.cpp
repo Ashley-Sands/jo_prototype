@@ -41,14 +41,14 @@ void AAudioManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	playbackTime += DeltaTime;
-
+/*
 	FString playbackTimeStr = FString::SanitizeFloat(playbackTime);
 	GEngine->AddOnScreenDebugMessage(3, 0.2f, FColor::Green, "Manager");
 	GEngine->AddOnScreenDebugMessage(4, 0.2f, FColor::Green, playbackTimeStr);
 
 	FString psStr = FString::SanitizeFloat(nextLoop);
 	GEngine->AddOnScreenDebugMessage(5, 0.2f, FColor::Black, psStr);
-
+*/
 	if (switchPlayer)
 	{
 

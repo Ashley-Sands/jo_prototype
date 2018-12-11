@@ -38,6 +38,7 @@ void AA_AudioCube::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	playbackTime += DeltaTime;
+
 	if (debug) {
 		FString playbackTimeHeaderStr = "Playback Position";
 		FString playbackTimeStr = FString::SanitizeFloat(playbackTime);
