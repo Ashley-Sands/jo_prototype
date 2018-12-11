@@ -18,6 +18,7 @@ AAudioManager::AAudioManager()
 	nextLoop = 0;
 	switchPlayer = true;
 	playedSwitchAudio = false;
+	currentProjectile = 0;
 }
 
 // Called when the game starts or when spawned

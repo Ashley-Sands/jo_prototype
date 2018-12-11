@@ -50,11 +50,13 @@ void AProjectile::Tick(float DeltaTime)
 void AProjectile::Reset()
 {
 	isProjectileActive = false;
+	currentYPosition = holdPosition.Y;
 	SetActorLocation(startPosition);
 
 }
 
 void AProjectile::StartProjectile()
 {
+	currentYPosition = startPosition.Y;
 	isProjectileActive = true;
 }

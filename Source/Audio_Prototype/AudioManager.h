@@ -56,5 +56,6 @@ private:
 	
 	bool playedSwitchAudio;
 	
+	int currentProjectile;
 	
 };
